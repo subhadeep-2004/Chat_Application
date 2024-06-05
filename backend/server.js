@@ -6,6 +6,10 @@ import connectDB from './db/connect.js';
 import messagesRoutes from './routes/message.routes.js'
 import cookieParser from 'cookie-parser';
 import userRoutes from './routes/userRoutes.routes.js'
+
+// git add .
+// git commit  -m "1st part completed-backend"
+
 const app = express();
 // Mongodb details
 // username:bhadrasubhadeep2004
