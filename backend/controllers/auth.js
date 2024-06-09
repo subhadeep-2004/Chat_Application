@@ -57,12 +57,12 @@ export const logOut =  (req,res)=>{
 export const signUp= async (req,res)=>{
   try{
     // ,userName, pwd, confirmPwd, gender
-   const {fullName,userName, pwd, confirmPwd, gender} = req.body
+   const {fullName,userName, pwd, gender} = req.body
     // console.log(fullName);
 
-    if(pwd!= confirmPwd){
-    return res.status(400).json({error:"Password and Confirm Password are not same!"})
-    }
+    // if(pwd!= confirmPwd){
+    // return res.status(400).json({error:"Password and Confirm Password are not same!"})
+    // }
 
     const user = await Users.findOne({userName})
     if(user){

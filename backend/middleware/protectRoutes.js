@@ -6,7 +6,7 @@ const protectRoutes = async (req, res,next)=>{
     try {
         const token = req.cookies.jwt;
         // console.log(token);
-        console.log(token);
+        // console.log(token);
         if(!token){
             // unauthorized
            return res.status(401).json({error:"Un-Authorized please Sign Up or Log in"})
@@ -26,7 +26,7 @@ const protectRoutes = async (req, res,next)=>{
             exp: 1719921105
           }
           */
-        console.log(decode);
+        // console.log(decode);
         if(!decode){
             return res.status(401).json({error:"Invalid Token"})
         }

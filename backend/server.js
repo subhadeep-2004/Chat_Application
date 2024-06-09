@@ -6,11 +6,11 @@ import connectDB from './db/connect.js';
 import messagesRoutes from './routes/message.routes.js'
 import cookieParser from 'cookie-parser';
 import userRoutes from './routes/userRoutes.routes.js'
-
+import { app,server } from './socket/socket.js';
 // git add .
 // git commit  -m "1st part completed-backend"
 
-const app = express();
+
 // Mongodb details
 // username:bhadrasubhadeep2004
 //  pwd :Xiy2E4I7eq7CaoVc
@@ -30,7 +30,7 @@ app.use("/api/auth",authRoutes)
 app.use("/api/messages",messagesRoutes)
 app.use("/api/users",userRoutes)
 
-app.listen(PORT,()=>{
+server.listen(PORT,()=>{
     connectDB()
     console.log(`Server is running ${PORT}`)
 

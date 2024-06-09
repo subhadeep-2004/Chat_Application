@@ -19,5 +19,16 @@ export default {
       // themes: ["light", "dark", "cupcake"],
     },
   },
-  plugins: [daisyui],
+  plugins: [daisyui
+
+    // , function ({ addUtilities }) {
+    //   addUtilities({
+    //     '.scrolling-touch': {
+    //       '-webkit-overflow-scrolling': 'touch',
+    //     },
+    //   });
+    // }
+
+
+  ],
 }
